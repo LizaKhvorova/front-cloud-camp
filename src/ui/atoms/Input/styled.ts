@@ -26,8 +26,8 @@ export const StyledInput = styled.input<IStyledInputProps>`
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.16);
     border-radius: 4px;
-    height: ${(props) => {
-        switch (props.variation) {
+    height: ${({variation}) => {
+        switch (variation) {
             case "small":
                 return "28px";
             case "medium":
@@ -38,8 +38,8 @@ export const StyledInput = styled.input<IStyledInputProps>`
                 return "44px";
         }
     }};
-    width: ${(props) => {
-        switch (props.variation) {
+    width: ${({variation}) => {
+        switch (variation) {
             case "small":
                 return "200px";
             case "medium":
