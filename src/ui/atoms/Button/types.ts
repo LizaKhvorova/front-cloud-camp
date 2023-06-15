@@ -13,4 +13,10 @@ export interface IButtonProps
     onClick?: () => void;
 
     children?: React.ReactNode;
+
+    reverse?: boolean
+}
+
+export interface IStyledButtonProps extends IButtonProps {
+    reverse?: boolean
 }
