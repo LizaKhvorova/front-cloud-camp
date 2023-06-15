@@ -9,6 +9,7 @@ export const StyledInput = styled.input<IStyledInputProps>`
     box-sizing: border-box;
     font-family: SB Sans Interface;
     font-weight: 400;
+    font-size: 14px;
     padding: ${({ theme }) => theme.indent.l}
         ${({ theme, variation }) => {
             switch (variation) {
@@ -22,9 +23,9 @@ export const StyledInput = styled.input<IStyledInputProps>`
                     return theme.indent.l;
             }
         }};
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.04);
+    background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
     height: ${(props) => {
         switch (props.variation) {
             case "small":
@@ -53,12 +54,12 @@ export const StyledInput = styled.input<IStyledInputProps>`
     color: rgba(0, 0, 0, 0.48);
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.16);
+        background: rgba(0, 0, 0, 0.04);
         color: black;
     }
 
     &:focus {
-        background-color: rgba(0, 0, 0, 0.16);
+        background: rgba(0, 0, 0, 0.04);
         color: black;
     }
 
@@ -75,13 +76,17 @@ export const TipMessage = styled(Box)`
     font-weight: 400;
     font-size: 12px;
     color: rgba(0, 0, 0, 0.48);
+    margin-top: 8px;
+    margin-left: 2px;
 
     ${adaptive.maxWidth.tablet} {
         font-size: 10px;
+        margin-top: 6px;
     }
 
     ${adaptive.maxWidth.mobile} {
         font-size: 10px;
+        margin-top: 4px;
     }
 `;
 
@@ -92,13 +97,16 @@ export const StyledLabel = styled(Box)`
     font-size: 14px;
     color: #333333;
     margin-bottom: 8px;
+    margin-left: 2px;
 
     ${adaptive.maxWidth.tablet} {
         font-size: 12px;
+        margin-bottom: 6px;
     }
 
     ${adaptive.maxWidth.mobile} {
         font-size: 10px;
+        margin-bottom: 4px;
     }
 `;
 

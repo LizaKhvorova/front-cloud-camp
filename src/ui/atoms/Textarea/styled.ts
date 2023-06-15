@@ -82,7 +82,7 @@ export const TipMessage = styled(Box)`
 
     ${adaptive.maxWidth.tablet} {
         font-size: 10px;
-        margin-top: 6cqb;
+        margin-top: 6px;
     }
 
     ${adaptive.maxWidth.mobile} {
