@@ -9,7 +9,6 @@ import {
 import { IInputProps } from "./types";
 
 import { Absolute, Box, Relative } from "../Basics";
-import { theme } from "../../theme";
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
     (
