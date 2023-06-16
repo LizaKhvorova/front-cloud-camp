@@ -1,8 +1,14 @@
-interface IOptions {
-    value: string;
-    title: string;
+
+export enum Sex {
+    man = "man",
+    woman = "woman"
 }
 
-export interface IGenderOptions {
-options: IOptions [];
-}
+// interface IOptions {
+//     value: string;
+//     title: string;
+// }
+
+// export interface IGenderOptions {
+// options: IOptions [];
+// }

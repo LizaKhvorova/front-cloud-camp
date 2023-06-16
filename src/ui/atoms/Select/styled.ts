@@ -59,7 +59,9 @@ export const StyledTitle = styled(Box)<IStyledUlProps>`
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
+
     color: ${({color}) => color};
+
     padding: 12px;
     border: 1px solid rgba(0, 0, 0, 0.16);
     border-radius: 4px;

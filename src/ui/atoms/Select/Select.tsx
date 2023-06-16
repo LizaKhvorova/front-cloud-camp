@@ -4,9 +4,9 @@ import {ISelectProps} from "./types";
 import {ArrowDown} from "../Icon";
 import { Box } from "../Basics";
 
-export const Select = ({label = "Sex", size = "large", options}: ISelectProps) => {
+export const Select = ({label = "Sex", size = "large", options, value = "Не выбрано"}: ISelectProps) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [option, setOption] = useState("Не выбрано");
+    const [option, setOption] = useState(value);
 
     const handleSelect = (value: any) => {
         setIsOpen(false);
@@ -16,22 +16,17 @@ export const Select = ({label = "Sex", size = "large", options}: ISelectProps) =
     const handleOpen = () => {
         setIsOpen(!isOpen);
     }
+
+    
     return (
         <Box>
             {label? <StyledLabel>{label}</StyledLabel> : null}
-            {option === "Не выбрано" ? 
-                <StyledTitle color="rgba(0, 0, 0, 0.48)">{option}
+            <StyledTitle color={option === "Не выбрано"? "rgba(0, 0, 0, 0.48)" : "#333333" }>
+                {option}
                 <Box onClick={handleOpen}>
                     <ArrowDown/>
                 </Box>
-                </StyledTitle> 
-            : 
-                <StyledTitle color="#333333">{option}
-                <Box onClick={handleOpen}>
-                    <ArrowDown/>
-                </Box>
-                </StyledTitle>
-            }
+            </StyledTitle> 
             {isOpen?
                 <StyledUl size={size}>
                 <StyledWrapper>
