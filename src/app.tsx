@@ -7,6 +7,7 @@ import { Textarea } from 'ui/atoms/Textarea';
 import { Select } from 'ui/atoms/Select/Select';
 import { genderOptions} from "./consts";
 import { Card } from "./ui/atoms/Card";
+import { Link } from 'ui/atoms/Link';
 
 import { createGlobalStyle } from 'styled-components'
 
@@ -26,7 +27,8 @@ export const App = (): ReactElement => {
             <Input placeholder='username/email' label='Nickname'/>
             <Button>Start</Button>
             <Textarea placeholder='placeholder' tip='Tip' label='About'/>
-            <Select options={genderOptions}/>
+            <Select options={genderOptions} />
+            <Link href='/'>Telegram</Link>
             </CloudThemeProvider>
            </Card>
             

@@ -6,12 +6,12 @@ export interface ISelectProps{
     label?: string;
     color?: string; 
     options: any;
-    value: string;
+    value?: string;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onClick?: () => void;
 }
 
 export interface IStyledUlProps extends ISelectProps{
     variation?: size;
-    value: string;
+    value?: string;
 }
