@@ -1,21 +1,17 @@
 import React from "react";
 
-import { StyledButton, StyledButtonReverse} from "./styled";
+import { StyledButton} from "./styled";
 import { IButtonProps } from "./types";
 
 export const Button = ({
     children,
-    reverse
+    inverted
 }: IButtonProps) => {
     return (
-        reverse? 
-           ( <StyledButtonReverse type="button">
+
+     <StyledButton type="button" inverted={inverted}>
             {children}
-        </StyledButtonReverse>)
-        :
-        (    <StyledButton type="button">
-            {children}
-        </StyledButton>)
+        </StyledButton>
         
     );
 };

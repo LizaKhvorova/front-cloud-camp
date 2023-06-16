@@ -14,9 +14,9 @@ export interface IButtonProps
 
     children?: React.ReactNode;
 
-    reverse?: boolean
+    inverted?: boolean
 }
 
 export interface IStyledButtonProps extends IButtonProps {
-    reverse?: boolean
+    inverted?: boolean
 }
