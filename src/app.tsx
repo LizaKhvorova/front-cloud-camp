@@ -10,6 +10,7 @@ import { Card } from "./ui/atoms/Card";
 import { Link } from 'ui/atoms/Link';
 
 import { createGlobalStyle } from 'styled-components'
+import { FullName } from 'ui/atoms/FullName';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,6 +31,7 @@ export const App = (): ReactElement => {
             <Select options={genderOptions} />
             <Link href='/'>Telegram</Link>
             </CloudThemeProvider>
+            <FullName>Иван Иванов</FullName>
            </Card>
             
         </>
