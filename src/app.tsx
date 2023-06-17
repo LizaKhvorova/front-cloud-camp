@@ -8,9 +8,12 @@ import { Select } from 'ui/atoms/Select/Select';
 import { genderOptions} from "./consts";
 import { Card } from "./ui/atoms/Card";
 import { Link } from 'ui/atoms/Link';
+import { Avatar } from 'ui/atoms/Avatar';
+import img from "./ui/atoms/Avatar/IMG_6305.png";
 
 import { createGlobalStyle } from 'styled-components'
 import { FullName } from 'ui/atoms/FullName';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -32,6 +35,7 @@ export const App = (): ReactElement => {
             <Link href='/'>Telegram</Link>
             </CloudThemeProvider>
             <FullName>Иван Иванов</FullName>
+            <Avatar url={img}></Avatar>
            </Card>
             
         </>
