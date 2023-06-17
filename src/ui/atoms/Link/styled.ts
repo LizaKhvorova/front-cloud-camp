@@ -37,4 +37,5 @@ export const StyledWrapper = styled(Flex)<{ size: LinkProps["size"] }>`
     ${adaptive.maxWidth.mobile} {
         font-size: 7px;
     }
+    margin-right: 16px;
 `

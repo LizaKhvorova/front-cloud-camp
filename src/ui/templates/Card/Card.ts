@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "../Basics";
+import { Flex } from "../../atoms/Basics";
 
 export const Card = styled(Flex)`
     max-width: 900px;

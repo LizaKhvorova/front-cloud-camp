@@ -6,10 +6,11 @@ import { Button } from 'ui/atoms/Button';
 import { Textarea } from 'ui/atoms/Textarea';
 import { Select } from 'ui/atoms/Select/Select';
 import { genderOptions} from "./consts";
-import { Card } from "./ui/atoms/Card";
+import { Card } from "./ui/templates/Card";
 import { Link } from 'ui/atoms/Link';
 import { Avatar } from 'ui/atoms/Avatar';
-import img from "./ui/atoms/Avatar/IMG_6305.png";
+// import img from "./ui/atoms/Avatar/IMG_6305.png";
+import { Head } from 'ui/organisms/ProfileForm/Head';
 
 import { createGlobalStyle } from 'styled-components'
 import { FullName } from 'ui/atoms/FullName';
@@ -25,19 +26,15 @@ export const App = (): ReactElement => {
     return(
         <>
            <GlobalStyle />
-           <Card>
            <CloudThemeProvider theme={theme}>
-            <div>hello</div>
-            <Input placeholder='username/email' label='Nickname'/>
-            <Button>Start</Button>
-            <Textarea placeholder='placeholder' tip='Tip' label='About'/>
-            <Select options={genderOptions} />
-            <Link href='/'>Telegram</Link>
+            <Card>
+                <Head/>
+                <Input placeholder='username/email' label='Nickname'/>
+                <Button>Start</Button>
+                <Textarea placeholder='placeholder' tip='Tip' label='About'/>
+                <Select options={genderOptions} />
+            </Card>
             </CloudThemeProvider>
-            <FullName>Иван Иванов</FullName>
-            <Avatar url={img}></Avatar>
-           </Card>
-            
         </>
      
 

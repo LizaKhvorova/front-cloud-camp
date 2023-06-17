@@ -5,7 +5,7 @@ import { Folder } from "../Icon";
 
 export const Link: FC<LinkProps> = ({children, href, onClick, size = "medium"}) => {
     return (
-        <StyledWrapper size={size}> 
+        <StyledWrapper size={size} > 
             <Folder />
             <StyledLink
                 href={href}
