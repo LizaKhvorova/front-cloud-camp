@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Flex } from "../../atoms/Basics";
 
 export const Card = styled(Flex)`
+    box-sizing: border-box;
     max-width: 900px;
     flex-direction: column;
     width: ${({width}) => width};

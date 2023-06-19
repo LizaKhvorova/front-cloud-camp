@@ -14,7 +14,8 @@ export interface IButtonProps
 
     children?: React.ReactNode;
 
-    inverted?: boolean
+    inverted?: boolean;
+    margin?: string;
 }
 
 export interface IStyledButtonProps extends IButtonProps {

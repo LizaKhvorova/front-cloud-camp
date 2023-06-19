@@ -6,7 +6,7 @@ import { Flex } from "ui/atoms/Basics";
 
 export const Head = () => {
     return (
-        <Flex padding="25px" alignItems="center">
+        <Flex alignItems="center">
             <Avatar initial={"II"}/>
             <Flex flexDirection="column" marginLeft="25px">
                 <FullName>Ivan Ivanov</FullName>

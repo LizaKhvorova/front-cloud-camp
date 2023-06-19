@@ -5,11 +5,12 @@ import { IButtonProps } from "./types";
 
 export const Button = ({
     children,
-    inverted
+    inverted, 
+    margin
 }: IButtonProps) => {
     return (
 
-     <StyledButton type="button" inverted={inverted}>
+     <StyledButton type="button" inverted={inverted} margin={margin}>
             {children}
         </StyledButton>
         

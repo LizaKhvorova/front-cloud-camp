@@ -14,6 +14,8 @@ import { Head } from 'ui/organisms/ProfileForm/Head';
 
 import { createGlobalStyle } from 'styled-components'
 import { FullName } from 'ui/atoms/FullName';
+import { PhoneInput } from 'ui/atoms/Input/PhoneInput';
+import { Profile } from 'pages/Profile/Profile';
 
 
 const GlobalStyle = createGlobalStyle`
@@ -27,13 +29,15 @@ export const App = (): ReactElement => {
         <>
            <GlobalStyle />
            <CloudThemeProvider theme={theme}>
-            <Card>
+            {/* <Card>
                 <Head/>
                 <Input placeholder='username/email' label='Nickname'/>
                 <Button>Start</Button>
                 <Textarea placeholder='placeholder' tip='Tip' label='About'/>
                 <Select options={genderOptions} />
-            </Card>
+                <PhoneInput placeholder='(+7) 999 999 9999'/>
+            </Card> */}
+            <Profile />
             </CloudThemeProvider>
         </>
      
@@ -41,3 +45,4 @@ export const App = (): ReactElement => {
     )
        
 }
+

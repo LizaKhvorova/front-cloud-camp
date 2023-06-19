@@ -3,6 +3,7 @@ import {IStyledButtonProps} from "./types";
 
 export const StyledButton = styled.button<IStyledButtonProps>`
     display: flex;
+    margin: ${({margin}) => margin};
     justify-content: center;
     align-items: center;
     font-family: SB Sans Interface;
