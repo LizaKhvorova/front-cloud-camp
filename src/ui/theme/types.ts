@@ -1,9 +1,10 @@
 import { ReactNode } from "react";
 
-import { TIndent } from "./tokens";
+import { TIndent, TFonts } from "./tokens";
 
 export interface ITheme {
     indent: TIndent;
+    fonts: TFonts;
 }
 
 export interface ICloudThemeProviderProps {

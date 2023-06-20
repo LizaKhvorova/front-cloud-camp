@@ -3,7 +3,7 @@ import React from "react";
 import { AvatarWrapper, AvatarImage } from "./styled";
 import { TAvatarProps } from "./types";
 
-export const Avatar = ({ url, initial = "BB"}: TAvatarProps) => {
+export const Avatar = ({ url, initial}: TAvatarProps) => {
     return (
         <AvatarWrapper>
             {url? 

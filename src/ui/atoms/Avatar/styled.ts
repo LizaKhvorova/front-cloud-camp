@@ -37,7 +37,7 @@ export const AvatarWrapper = styled(Box)`
     align-items: center;
     justify-content: center;
     font-size: 40px;
-    font-family: SB Sans Text Mono;
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     width: 80px;
     height: 80px;
     border-radius: 50%;

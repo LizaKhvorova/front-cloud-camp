@@ -6,7 +6,7 @@ export const StyledButton = styled.button<IStyledButtonProps>`
     margin: ${({margin}) => margin};
     justify-content: center;
     align-items: center;
-    font-family: SB Sans Interface;
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     border-radius: 4px;
     ${({inverted}) => inverted? 
         `background: #FFFFFF;

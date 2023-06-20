@@ -5,6 +5,7 @@ import { LinkProps } from "./types";
 
 export const StyledLink = styled.a`
     text-decoration: none;
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     cursor: pointer;
     color: #5558FA;
     margin-left: 4px;

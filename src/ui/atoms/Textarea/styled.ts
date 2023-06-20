@@ -7,7 +7,7 @@ import { Box } from "../Basics";
 
 export const StyledTextarea = styled.textarea<IStyledTextareaProps>`
     box-sizing: border-box;
-    font-family: SB Sans Interface;
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-weight: 400;
     font-size: 14px;
 
@@ -72,7 +72,7 @@ export const StyledTextarea = styled.textarea<IStyledTextareaProps>`
 `;
 
 export const TipMessage = styled(Box)`
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -92,7 +92,7 @@ export const TipMessage = styled(Box)`
 `;
 
 export const StyledLabel = styled(Box)`
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

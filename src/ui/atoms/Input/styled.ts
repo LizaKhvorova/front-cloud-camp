@@ -7,7 +7,7 @@ import { Box } from "../Basics";
 
 export const StyledInput = styled.input<IStyledInputProps>`
     box-sizing: border-box;
-    font-family: SB Sans Interface;
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-weight: 400;
     font-size: 14px;
     padding: ${({ theme }) => theme.indent.l}
@@ -71,7 +71,7 @@ export const StyledInput = styled.input<IStyledInputProps>`
 `;
 
 export const TipMessage = styled(Box)`
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -91,7 +91,7 @@ export const TipMessage = styled(Box)`
 `;
 
 export const StyledLabel = styled(Box)`
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

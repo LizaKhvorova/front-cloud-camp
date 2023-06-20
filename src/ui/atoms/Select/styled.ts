@@ -4,7 +4,7 @@ import { Box } from "../Basics";
 import { adaptive } from "../../theme";
 
 export const StyledLabel = styled(Box)`
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -55,7 +55,7 @@ export const StyledTitle = styled(Box)<IStyledUlProps>`
                 return "44px";
         }
     }};
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -76,7 +76,7 @@ export const StyledUl = styled.ul<IStyledUlProps>`
 
 export const StyledLi = styled.li<IStyledUlProps>`
     box-sizing: border-box;
-    font-family: 'SB Sans Interface';
+    font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-style: normal;
     font-weight: 400;
     font-size: 14px;

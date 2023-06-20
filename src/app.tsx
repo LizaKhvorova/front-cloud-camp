@@ -13,10 +13,9 @@ import { Avatar } from 'ui/atoms/Avatar';
 import { Head } from 'ui/organisms/ProfileForm/Head';
 
 import { createGlobalStyle } from 'styled-components'
-import { FullName } from 'ui/atoms/FullName';
 import { PhoneInput } from 'ui/atoms/Input/PhoneInput';
 import { Profile } from 'pages/Profile/Profile';
-
+import FontStyles from "./ui/theme/FontStyles";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -28,6 +27,7 @@ export const App = (): ReactElement => {
     return(
         <>
            <GlobalStyle />
+           <FontStyles />
            <CloudThemeProvider theme={theme}>
             {/* <Card>
                 <Head/>
