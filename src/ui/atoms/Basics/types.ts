@@ -7,6 +7,7 @@ import {
     PaddingProps,
     ShadowProps,
     SpaceProps,
+    PositionProps
 } from "styled-system";
 
 export interface IBoxProps
@@ -15,7 +16,8 @@ export interface IBoxProps
         BackgroundColorProps,
         BorderProps,
         SpaceProps,
-        ShadowProps {
+        ShadowProps,
+        PositionProps {
     gap?: string;
     backgroundColor?: string;
 }

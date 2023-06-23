@@ -8,7 +8,7 @@ export interface ITypographyProps
             StyleHTMLAttributes<HTMLSpanElement>,
             HTMLSpanElement
         > {
-    size:
+    size?:
         | "xs"
         | "base"
         | "l"

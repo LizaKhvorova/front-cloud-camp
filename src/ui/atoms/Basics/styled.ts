@@ -18,6 +18,7 @@ import {
     order,
     shadow,
     space,
+    position
 } from "styled-system";
 
 import { IBoxProps, IFlexProps } from "./types";
@@ -27,7 +28,8 @@ export const Box = styled.div<IBoxProps>`
     ${border};
     ${layout};
     ${space};
-    ${shadow}
+    ${shadow};
+    ${position}
 `;
 export const Flex = styled(Box)<IFlexProps>`
     display: flex;
