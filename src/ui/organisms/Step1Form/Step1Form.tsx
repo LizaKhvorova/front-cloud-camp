@@ -18,7 +18,7 @@ export const Step1Form = () => {
                 <Select options={genderOptions}/>
             </Flex>
             <Flex justifyContent="space-between">
-                <Button inverted={true}>Назад</Button>
+                <Button inverted>Назад</Button>
                 <Button>Далее</Button>
             </Flex>
         </Flex>    

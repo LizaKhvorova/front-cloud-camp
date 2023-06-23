@@ -22,7 +22,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
             onFocus,
             value,
             errorMessage,
-            tip = "Tip",
+            tip,
             status,
             ...other
         },

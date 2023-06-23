@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
-
+import {SpaceProps, LayoutProps} from "styled-system";
 export interface IButtonProps
     extends Omit<
             DetailedHTMLProps<
@@ -7,7 +7,7 @@ export interface IButtonProps
                 HTMLButtonElement
             >,
             "width" | "ref" | "color" | "backgroundColor"
-        > 
+        >, SpaceProps
         {
 
     onClick?: () => void;
@@ -15,7 +15,8 @@ export interface IButtonProps
     children?: React.ReactNode;
 
     inverted?: boolean;
-    margin?: string;
+
+    width?: string;
 }
 
 export interface IStyledButtonProps extends IButtonProps {

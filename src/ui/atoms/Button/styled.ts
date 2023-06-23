@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import {IStyledButtonProps} from "./types";
+import { space } from "styled-system";
 
 export const StyledButton = styled.button<IStyledButtonProps>`
     display: flex;
-    margin: ${({margin}) => margin};
+    ${space}
     justify-content: center;
     align-items: center;
     font-family: ${({theme}) => theme.fonts.SBSansInterface};
@@ -17,9 +18,9 @@ export const StyledButton = styled.button<IStyledButtonProps>`
         background: #5558FA;
         color: #FFFFFF;`
     }
-
-    width: 79px;
+    width: ${({width}) => width};
     height: 44px;
+    padding: 12px;
 
     &:hover {
         ${({inverted}) => inverted? 
