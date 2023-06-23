@@ -2,11 +2,9 @@ import React, { ReactElement } from 'react';
 import { theme } from "./ui/theme";
 import { CloudThemeProvider } from "./ui/theme";
 import { createGlobalStyle } from 'styled-components'
-import { Profile } from 'pages/Profile/Profile';
+import { Profile } from 'pages/Profile';
+import {Step1} from "pages/Step1";
 import FontStyles from "./ui/theme/FontStyles";
-import { ProgressBar } from 'ui/atoms/Stepper';
-import { Flex } from 'ui/atoms/Basics';
-import { Card } from 'ui/templates/Card';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -20,13 +18,7 @@ export const App = (): ReactElement => {
            <GlobalStyle />
            <FontStyles />
            <CloudThemeProvider theme={theme}>
-            <Profile />
-            <Card>
-            <Flex marginTop="20px">
-            <ProgressBar width='680px'/>
-            </Flex> 
-            </Card>
-           
+            <Step1 />
             </CloudThemeProvider>
         </>
      

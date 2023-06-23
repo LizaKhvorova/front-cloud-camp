@@ -15,14 +15,14 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         {
             label,
             type = "text",
-            placeholder = "",
+            placeholder = "placeholder",
             size = "lagre",
             onChange,
             onBlur,
             onFocus,
             value,
             errorMessage,
-            tip,
+            tip = "Tip",
             status,
             ...other
         },

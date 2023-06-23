@@ -21,9 +21,6 @@ export const StyledLabel = styled(Box)`
         font-size: 10px;
         margin-bottom: 4px;
     }
-
-    margin-top: 30px;
-
 `;
 
 export const StyledTitle = styled(Box)<IStyledUlProps>`
@@ -98,6 +95,5 @@ export const StyledWrapper = styled(Box)`
     background: #FFFFFF;
     border: none;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-
 `
 
