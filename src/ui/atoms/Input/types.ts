@@ -10,6 +10,7 @@ export interface IInputProps {
     type?: "password" | "text" | "email";
     label?: string;
     tip?: string;
+    cancel?: boolean;
     ref?: React.Ref<HTMLInputElement>;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;

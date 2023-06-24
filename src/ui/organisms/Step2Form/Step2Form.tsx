@@ -14,9 +14,9 @@ export const Step2Form = () => {
                 <Box mb="10px">
                     <Typography>Advantages</Typography>
                 </Box>
-            <Input />
-            <Input />
-            <Input />
+            <Input cancel/>
+            <Input cancel/>
+            <Input cancel/>
             </Flex> 
                 <Button inverted width="45px"><Cross/></Button>
             <Flex justifyContent="space-between" mt="60px">

@@ -4,13 +4,14 @@ import {
     InputWrapper,
     StyledInput,
     StyledLabel,
-    TipMessage,
+    TipMessage
 } from "./styled";
 import { IInputProps } from "./types";
 
-import { Absolute, Box, Relative } from "../Basics";
+import { Absolute, Box, Relative, Flex } from "../Basics";
+import { Delete } from "../Icon";
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
+export const Input = forwardRef<HTMLInputElement, IInputProps> (
     (
         {
             label,
@@ -24,12 +25,12 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
             errorMessage,
             tip,
             status,
+            cancel,
             ...other
         },
         ref,
     ) => {
         const [inputValue, setInputValue] = useState<typeof value>(value || "");
-
         useEffect(() => {
             if (value !== undefined && value !== inputValue) {
                 setInputValue(value);
@@ -43,6 +44,9 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
             onChange?.(e);
         };
 
+        const handleCancelInput = () => {
+        }
+
         return (
             <InputWrapper {...other} marginBottom="24px">
                 {label ? (
@@ -51,17 +55,20 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
                     </Box>
                 ) : null}
                 <Relative>
-                    <StyledInput
-                        type={type}
-                        placeholder={placeholder}
-                        variation={size}
-                        onChange={handleChangeInput}
-                        onBlur={onBlur}
-                        onFocus={onFocus}
-                        value={inputValue}
-                        ref={ref}
-                        {...other}
-                    />
+                    <Flex alignItems="center">
+                        <StyledInput
+                            type={type}
+                            placeholder={placeholder}
+                            variation={size}
+                            onChange={handleChangeInput}
+                            onBlur={onBlur}
+                            onFocus={onFocus}
+                            value={inputValue}
+                            ref={ref}
+                            {...other}
+                        />
+                        {cancel? <Delete /> : null}
+                    </Flex>
                     <Absolute>
                         {status ? (
                             <TipMessage>

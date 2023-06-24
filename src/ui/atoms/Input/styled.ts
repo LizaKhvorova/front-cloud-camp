@@ -4,6 +4,7 @@ import { IStyledInputProps } from "./types";
 
 import { adaptive } from "../../theme";
 import { Box } from "../Basics";
+import { Delete } from "../Icon";
 
 export const StyledInput = styled.input<IStyledInputProps>`
     box-sizing: border-box;
@@ -52,7 +53,6 @@ export const StyledInput = styled.input<IStyledInputProps>`
     }};
 
     color: rgba(0, 0, 0, 0.48);
-
     &:hover {
         background: rgba(0, 0, 0, 0.04);
         color: black;
