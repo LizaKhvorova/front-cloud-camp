@@ -6,6 +6,7 @@ import { Button } from "ui/atoms/Button";
 import { Flex, Box } from "ui/atoms/Basics";
 import { Cross } from "ui/atoms/Icon";
 import { Checkbox } from "ui/atoms/Checkbox";
+import { Radio } from "ui/atoms/Radio";
 
 export const Step2Form = () => {
     return(
@@ -25,10 +26,14 @@ export const Step2Form = () => {
                 <Checkbox label="Agreed To Recieve News" />
                 <Checkbox label="Consented Data Processing"/>
             </Flex>
+            <Flex flexDirection="column" alignItems="start">
+                <Typography mb="5px">Radio Group</Typography>
+                <Radio />
+            </Flex>
             <Flex justifyContent="space-between" mt="60px">
                 <Button inverted={true}>Назад</Button>
                 <Button>Далее</Button>
-            </Flex>
+            Radio</Flex>
         </Flex>
     )
 }
