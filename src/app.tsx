@@ -4,7 +4,7 @@ import { CloudThemeProvider } from "./ui/theme";
 import { createGlobalStyle } from 'styled-components'
 import { Profile } from 'pages/Profile';
 import {Step1} from "pages/Step1";
-import { Step2 } from 'pages/Step2';
+import { Step3 } from 'pages';
 import FontStyles from "./ui/theme/FontStyles";
 
 const GlobalStyle = createGlobalStyle`
@@ -19,7 +19,7 @@ export const App = (): ReactElement => {
            <GlobalStyle />
            <FontStyles />
            <CloudThemeProvider theme={theme}>
-            <Step2 />
+            <Step3 />
             </CloudThemeProvider>
         </>
      

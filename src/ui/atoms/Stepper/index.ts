@@ -1,1 +1,1 @@
-export {Stepper as ProgressBar} from "./Stepper";
+export {Stepper} from "./Stepper";
