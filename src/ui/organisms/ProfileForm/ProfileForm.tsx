@@ -11,7 +11,7 @@ export const ProfileForm = () => {
             <Flex border={"1px solid rgba(0, 0, 0, 0.08)"} width="100%" maxWidth="852px" justifyContent="center" margin="24px 0"></Flex>
             <PhoneInput label="Номер телефона"/>
             <Input type="email" label="Email" placeholder="tim.jennings@example.com"/>
-            <Button margin="24px 0">Начать</Button>
+            <Button margin="24px 0" width="70px">Начать</Button>
         </>
 
     )

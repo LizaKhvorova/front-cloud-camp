@@ -8,7 +8,7 @@ export const Step3Form = () => {
             <Box mt="60px">
                 <Textarea label="About" tip="Tip" placeholder="placeholder"/>
             </Box>
-            <Flex justifyContent="space-between" mt="60px" width="680px">
+            <Flex justifyContent="space-between" mt="60px" maxWidth="680px">
                 <Button inverted={true}>Назад</Button>
                 <Button>Отправить</Button>
             </Flex>

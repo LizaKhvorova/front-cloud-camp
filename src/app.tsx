@@ -19,6 +19,7 @@ export const App = (): ReactElement => {
            <GlobalStyle />
            <FontStyles />
            <CloudThemeProvider theme={theme}>
+            <Profile />
             <Step3 />
             </CloudThemeProvider>
         </>
