@@ -1,11 +1,11 @@
 import React from "react";
 import { Step1Form } from "ui/organisms/Step1Form";
-import { Card } from "ui/templates/Card";
+import { StepsWrapper } from "ui/templates";
 
 export const Step1 = () => {
     return (
-        <Card padding="60px 100px 80px 100px">
+        <StepsWrapper>
             <Step1Form />
-        </Card>    
+        </StepsWrapper>    
     )
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Flex } from "../../atoms/Basics";
+import { Flex } from "../../atoms";
 
 export const Card = styled(Flex)`
     box-sizing: border-box;
