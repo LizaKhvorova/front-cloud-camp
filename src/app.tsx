@@ -4,8 +4,9 @@ import { CloudThemeProvider } from "./ui/theme";
 import { createGlobalStyle } from 'styled-components'
 import { Profile } from 'pages/Profile';
 import {Step1} from "pages/Step1";
-import { Step3 } from 'pages';
+import { Step3, Step2 } from 'pages';
 import FontStyles from "./ui/theme/FontStyles";
+import { Confirmation } from 'ui/organisms/Confirmation';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,8 +20,11 @@ export const App = (): ReactElement => {
            <GlobalStyle />
            <FontStyles />
            <CloudThemeProvider theme={theme}>
-            <Profile />
+            {/* <Profile />
+            <Step1 />
+            <Step2 /> */}
             <Step3 />
+            <Confirmation />
             </CloudThemeProvider>
         </>
      

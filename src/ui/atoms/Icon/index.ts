@@ -4,4 +4,7 @@ export { DotPassive } from "./DotPassive";
 export { DotDone } from "./DotDone";
 export { DotActive } from "./DotActive";
 export { Cross } from "./Cross";
-export { Delete } from "./Cancel/Cancel";
+export { Delete } from "./Cancel";
+export { Success } from "./Success";
+export { Error } from  "./Error";
+export { CloseModal } from "./CloseModal";

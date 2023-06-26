@@ -10,5 +10,5 @@ export const Card = styled(Flex)`
     border-radius: 24px;
     margin: 0 auto;
     margin-top: 25px;
-    min-height: 312px;
+    /* min-height: 312px; */
 `

@@ -1,4 +1,4 @@
-import { Flex } from "../../Basics";
+import { Flex } from "../Basics";
 import styled from "styled-components";
 
 export const StyledFlex = styled(Flex)`
