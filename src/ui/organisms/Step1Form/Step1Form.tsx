@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { Stepper } from "ui/atoms/Stepper/Stepper";
 import { Input } from "ui/atoms/Input";
 import { Select } from "ui/atoms/Select";
@@ -8,6 +9,8 @@ import { genderOptions } from "../../../consts/genderOptions";
 
 
 export const Step1Form = () => {
+    const navigate = useNavigate();
+
     return(
         <Flex flexDirection="column">
             <Stepper width="680px"/>
@@ -18,8 +21,8 @@ export const Step1Form = () => {
                 <Select options={genderOptions}/>
             </Flex>
             <Flex justifyContent="space-between">
-                <Button inverted>Назад</Button>
-                <Button>Далее</Button>
+                <Button inverted onClick={() => navigate(-1)}>Назад</Button>
+                <Button onClick={() => navigate("/step2")}>Далее</Button>
             </Flex>
         </Flex>    
     )

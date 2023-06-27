@@ -1,7 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { 
     Flex, 
-    Box,
     Stepper, 
     Input, 
     Typography, 
@@ -13,6 +13,7 @@ import { Cross } from "ui/atoms/Icon";
 
 
 export const Step2Form = () => {
+    const navigate = useNavigate();
     return(
         <Flex flexDirection="column">
             <Stepper width="680px" current={2}/> 
@@ -33,8 +34,8 @@ export const Step2Form = () => {
                 <Radio />
             </Flex>
             <Flex justifyContent="space-between" mt="60px">
-                <Button inverted={true}>Назад</Button>
-                <Button>Далее</Button>
+                <Button inverted onClick={() => navigate(-1)}>Назад</Button>
+                <Button onClick={() => navigate("/step3")}>Далее</Button>
             </Flex>
         </Flex>
     )
