@@ -70,17 +70,17 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
                         />
                         {cancel? <Delete /> : null}
                     </Flex>
-                    <Absolute>
+                    <Flex>
                         {status ? (
-                            <TipMessage>
+                            <TipMessage color="red">
                                 {errorMessage}
                             </TipMessage>
                         ) : tip ? (
-                            <TipMessage>
+                            <TipMessage color="rgba(0, 0, 0, 0.48)">
                                 {tip}
                             </TipMessage>
                         ) : null}
-                    </Absolute>
+                    </Flex>
                 </Relative>
             </InputWrapper>
         );

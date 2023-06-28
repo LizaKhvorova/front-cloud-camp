@@ -122,7 +122,7 @@ export const TipMessage = styled(Box)`
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.48);
+    color: ${({color}) => color} ;
     margin-top: 8px;
     margin-left: 2px;
 
