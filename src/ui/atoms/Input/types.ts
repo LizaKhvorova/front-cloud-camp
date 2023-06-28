@@ -7,7 +7,7 @@ export interface IInputProps {
     size?: size;
     value?: string;
     placeholder?: string;
-    type?: "password" | "text" | "email";
+    type?: "password" | "text" | "email" | "tel";
     label?: string;
     tip?: string;
     cancel?: boolean;
@@ -23,5 +23,5 @@ export interface IStyledInputProps
             HTMLInputElement
         >,
         Pick<IInputProps, "status" | "tip"> {
-    variation: size;
+    variation?: size;
 }

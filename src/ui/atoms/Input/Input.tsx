@@ -30,6 +30,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
         },
         ref,
     ) => {
+        console.log(value)
         const [inputValue, setInputValue] = useState<typeof value>(value || "");
         useEffect(() => {
             if (value !== undefined && value !== inputValue) {

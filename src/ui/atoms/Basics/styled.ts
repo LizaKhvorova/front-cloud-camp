@@ -21,7 +21,7 @@ import {
     position
 } from "styled-system";
 
-import { IBoxProps, IFlexProps } from "./types";
+import { IBoxProps, IFlexProps, IFormProps } from "./types";
 
 export const Box = styled.div<IBoxProps>`
     ${color};
@@ -56,10 +56,10 @@ export const Absolute = styled(Box)`
     position: absolute;
 `;
 
-// export const Form = styled.form<IFormProps>`
-//     ${color};
-//     ${border};
-//     ${layout};
-//     ${space};
-// `;
+export const Form = styled.form<IFormProps>`
+    ${color};
+    ${border};
+    ${layout};
+    ${space};
+`;
 

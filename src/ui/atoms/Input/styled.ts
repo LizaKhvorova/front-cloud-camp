@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+import InputMask from 'react-input-mask';
 
 import { IStyledInputProps } from "./types";
 
@@ -6,11 +7,35 @@ import { adaptive } from "../../theme";
 import { Box } from "../Basics";
 import { Delete } from "../Icon";
 
-export const StyledInput = styled.input<IStyledInputProps>`
+const inputStyles = css`
     box-sizing: border-box;
     font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-weight: 400;
     font-size: 14px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+
+    color: rgba(0, 0, 0, 0.48);
+    &:hover {
+        background: rgba(0, 0, 0, 0.04);
+        color: black;
+    }
+
+    &:focus {
+        background: rgba(0, 0, 0, 0.04);
+        color: black;
+    }
+
+    ::placeholder {
+        font-family: SB Sans Interface;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.48);
+    }
+`
+
+export const StyledInput = styled.input<IStyledInputProps>`
+    ${inputStyles};
     padding: ${({ theme }) => theme.indent.l}
         ${({ theme, variation }) => {
             switch (variation) {
@@ -24,9 +49,47 @@ export const StyledInput = styled.input<IStyledInputProps>`
                     return theme.indent.l;
             }
         }};
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 4px;
+    height: ${({variation}) => {
+        switch (variation) {
+            case "small":
+                return "28px";
+            case "medium":
+                return "36px";
+            case "large":
+                return "44px";
+            default:
+                return "44px";
+        }
+    }};
+    width: ${({variation}) => {
+        switch (variation) {
+            case "small":
+                return "200px";
+            case "medium":
+                return "250px";
+            case "large":
+                return "300px";
+            default:
+                return "300px";
+        }
+    }};
+`;
+
+export const StyledMaskedInput = styled(InputMask)<IStyledInputProps>`
+    ${inputStyles};
+    padding: ${({ theme }) => theme.indent.l}
+        ${({ theme, variation }) => {
+            switch (variation) {
+                case "small":
+                    return theme.indent.s;
+                case "medium":
+                    return theme.indent.m;
+                case "large":
+                    return theme.indent.l;
+                default:
+                    return theme.indent.l;
+            }
+        }};
     height: ${({variation}) => {
         switch (variation) {
             case "small":
@@ -52,23 +115,7 @@ export const StyledInput = styled.input<IStyledInputProps>`
         }
     }};
 
-    color: rgba(0, 0, 0, 0.48);
-    &:hover {
-        background: rgba(0, 0, 0, 0.04);
-        color: black;
-    }
-
-    &:focus {
-        background: rgba(0, 0, 0, 0.04);
-        color: black;
-    }
-
-    ::placeholder {
-        font-family: SB Sans Interface;
-        font-weight: 400;
-        color: rgba(0, 0, 0, 0.48);
-    }
-`;
+`
 
 export const TipMessage = styled(Box)`
     font-family: ${({theme}) => theme.fonts.SBSansInterface};

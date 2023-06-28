@@ -21,5 +21,11 @@ export interface IBoxProps
     gap?: string;
     backgroundColor?: string;
 }
+export interface IFormProps
+    extends LayoutProps,
+        PaddingProps,
+        BackgroundColorProps,
+        BorderProps,
+        SpaceProps {}
 
 export interface IFlexProps extends IBoxProps, FlexboxProps {}
