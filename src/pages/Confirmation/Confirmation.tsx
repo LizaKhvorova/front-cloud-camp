@@ -6,7 +6,7 @@ import { Success, Error, CloseModal } from "ui/atoms";
 import {IConfirmationProps} from "./types";
 
 export const Confirmation = ({setIsOpen}: IConfirmationProps) => {
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(true);
     const navigate = useNavigate();
     
     return (

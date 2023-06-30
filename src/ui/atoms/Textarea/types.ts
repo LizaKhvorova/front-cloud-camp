@@ -11,7 +11,8 @@ export interface ITextareaProps {
     label?: string;
     tip?: string;
     maxLength?: number;
-    onChange?: (value: string) => void;
+    ref?: React.Ref<HTMLTextAreaElement>;
+    onChange?:(event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
     onFocus?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;
 }
@@ -22,5 +23,5 @@ export interface IStyledTextareaProps
             HTMLTextAreaElement
         >,
         Pick<ITextareaProps, "status" | "tip"> {
-    variation: size;
+    variation?: size;
 }
