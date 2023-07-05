@@ -1,5 +1,6 @@
 
 export enum Sex {
+    notSelected = "Не выбрано",
     man = "man",
     woman = "woman"
 }

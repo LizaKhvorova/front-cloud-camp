@@ -8,22 +8,21 @@ export const Select = ({label = "Sex", size = "large", options, value = "Не в
     const [isOpen, setIsOpen] = useState(false);
     const [option, setOption] = useState(value);
 
-    const handleSelect = (value: any) => {
+    const handleSelect = (value: string) => {
         setIsOpen(false);
-        setOption(value)
+        setOption(value);
     }
 
     const handleOpen = () => {
         setIsOpen(!isOpen);
     }
 
-    
     return (
-        <Box>
+        <Box onClick={handleOpen}>
             {label? <StyledLabel>{label}</StyledLabel> : null}
             <StyledTitle color={option === "Не выбрано"? "rgba(0, 0, 0, 0.48)" : "#333333" }>
                 {option}
-                <Box onClick={handleOpen}>
+                <Box >
                     <ArrowDown/>
                 </Box>
             </StyledTitle> 
@@ -37,7 +36,6 @@ export const Select = ({label = "Sex", size = "large", options, value = "Не в
                 </StyledUl> 
             : null
             }     
-        </Box>
-             
+        </Box>        
     )
 }

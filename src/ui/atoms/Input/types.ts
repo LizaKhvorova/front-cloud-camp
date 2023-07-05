@@ -16,7 +16,6 @@ export interface IInputProps {
     onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
     onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
 }
-
 export interface IStyledInputProps
     extends DetailedHTMLProps<
             InputHTMLAttributes<HTMLInputElement>,
@@ -24,4 +23,10 @@ export interface IStyledInputProps
         >,
         Pick<IInputProps, "status" | "tip"> {
     variation?: size;
+}
+
+export interface IPhoneInputProps {
+    label?: string;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    value?: string;
 }

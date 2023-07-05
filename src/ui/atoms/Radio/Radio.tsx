@@ -14,7 +14,7 @@ export const Radio = ({
     return(
         <Flex flexDirection="column">
             {values.map((item) => (
-                <Flex>
+                <Flex key={item.value}>
                     <StyledRadio  value={item.value} checked={value === item.value ? true : false} onChange={handleChangeValue}/>
                     <Typography color="#333333" marginLeft="8px">{item.label}</Typography>
                 </Flex>

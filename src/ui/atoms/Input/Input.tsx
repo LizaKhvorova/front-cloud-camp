@@ -8,7 +8,7 @@ import {
 } from "./styled";
 import { IInputProps } from "./types";
 
-import { Absolute, Box, Relative, Flex } from "../Basics";
+import { Box, Relative, Flex } from "../Basics";
 import { Delete } from "../Icon";
 
 export const Input = forwardRef<HTMLInputElement, IInputProps> (

@@ -1,21 +1,48 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, {useEffect} from "react";
+import { useForm, Controller } from "react-hook-form";
 import { useNavigate } from "react-router";
-import { Input } from "ui/atoms/Input";
-import { Select } from "ui/atoms/Select";
-import { Button } from "ui/atoms/Button";
-import { Flex, Box } from "ui/atoms/Basics";
+import { Input, Select, Button, Flex, Box} from "ui/atoms";
+import { useAppDispatch, useAppSelector, addProfileData, addSex } from "store";
 import { genderOptions } from "../../../consts/genderOptions";
 
 export const InputForm = () => {
-    const {register, handleSubmit, formState: { errors }} = useForm({mode: "onBlur"});
-    const onSubmit = (data: any) => console.log(data);
     const navigate = useNavigate();
+    const dispatch = useAppDispatch();
+    const {
+        register, 
+        control, 
+        formState: { errors }, 
+        getValues, 
+        setValue
+    } = useForm<{nickname: string, name: string, surname: string, sex: "man" | "woman" | "Не выбрано"}>({mode: "onBlur"});
+
+    const data = useAppSelector(state => ({
+        nickname: state.data.data?.nickname,
+        name: state.data.data?.name,
+        surname: state.data.data?.surname,
+        sex: state.data.sex
+    }));
+
+    useEffect(() => {
+        setValue("nickname", data.nickname as string);
+        setValue("name", data.name as string);
+        setValue("surname", data.surname as string);
+        setValue("sex", data.sex as "man" | "woman" | "Не выбрано");
+    }, [])
+  // TODO Select
+   const handleMove = () => {
+        const values = getValues();
+        console.log(values.sex);
+        dispatch(addProfileData({ nickname: values.nickname , name: values.name, surname: values.surname}))
+        dispatch(addSex(values.sex))
+        navigate("/step2")
+    }
     return (
-        <Box onSubmit={handleSubmit(onSubmit)}>
+        <Box>
             <Flex flexDirection="column" height="520px" marginY="20px" justifyContent="space-evenly">
                 <Input 
                     label="Nickname" 
+                    value={data.nickname}
                     {...register('nickname', 
                         { 
                             maxLength: 
@@ -30,6 +57,7 @@ export const InputForm = () => {
                 />
                 <Input 
                     label="Name"
+                    value={data.name}
                     {...register('name', 
                         { 
                             maxLength: 
@@ -44,6 +72,7 @@ export const InputForm = () => {
                 />
                 <Input 
                     label="Surname"
+                    value={data.surname}
                     {...register('surname', 
                         { 
                             maxLength: 
@@ -56,11 +85,27 @@ export const InputForm = () => {
                     errorMessage={
                         ((errors["surname"] || {}).message as string)}
                 />
-                <Select options={genderOptions}/>
+                {/* <Select 
+                    options={genderOptions} 
+                    value={data.sex} 
+                /> */}
+              
+                <Controller
+                control={control}
+                name="sex"
+                defaultValue={data.sex}
+                render={({ field: {onChange, value}}) => (
+                    <Select
+                        options={genderOptions} 
+                        onChange={onChange}
+                        value={value}
+                    />
+                  )}
+            />
             </Flex>
             <Flex justifyContent="space-between">
-                <Button inverted onClick={() => navigate(-1)}>Назад</Button>
-                <Button onClick={() => navigate("/step2")}>Далее</Button>
+                <Button inverted onClick={() => navigate("/profile")}>Назад</Button>
+                <Button onClick={handleMove}>Далее</Button>
             </Flex>
         </Box>    
     )
