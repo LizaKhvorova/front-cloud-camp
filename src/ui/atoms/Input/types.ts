@@ -11,6 +11,7 @@ export interface IInputProps {
     label?: string;
     tip?: string;
     cancel?: boolean;
+    handleCancel?: (id: any) => void;
     ref?: React.Ref<HTMLInputElement>;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;

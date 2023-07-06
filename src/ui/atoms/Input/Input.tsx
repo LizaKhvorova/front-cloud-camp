@@ -26,6 +26,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
             tip,
             status,
             cancel,
+            handleCancel,
             ...other
         },
         ref,
@@ -44,9 +45,6 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
             setInputValue(value);
             onChange?.(e);
         };
-
-        const handleCancelInput = () => {
-        }
 
         return (
             <InputWrapper {...other} marginBottom="24px">
@@ -68,7 +66,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
                             ref={ref}
                             {...other}
                         />
-                        {cancel? <Delete /> : null}
+                        {cancel? <Delete onClick={handleCancel}/> : null}
                     </Flex>
                     <Flex>
                         {status ? (
