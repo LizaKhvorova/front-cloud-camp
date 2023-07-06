@@ -11,7 +11,7 @@ import { ITextareaProps } from "./types";
 import { Absolute, Box, Flex, Relative } from "../Basics";
 import { Typography } from "../Typography";
 
-export const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps> (
+export const Textarea: FC<ITextareaProps> = 
     (
         {
             label,
@@ -25,7 +25,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps> (
             tip,
             status,
             maxLength
-        }, ref, 
+        }
     ) => {
         const [textareaValue, setTextareaValue] = useState<typeof value>(
             value || "",
@@ -64,7 +64,6 @@ export const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps> (
                             onFocus={onFocus}
                             value={textareaValue}
                             maxLength={maxLength}
-                            ref={ref}
                         />
                         <Flex justifyContent="flex-end" alignItems="self-end">
                                 <Typography size="xs" paddingRight="20px">
@@ -87,5 +86,4 @@ export const Textarea = forwardRef<HTMLTextAreaElement, ITextareaProps> (
                 </Relative>
             </TextareaWrapper>
         );
-    },
-);
+    };

@@ -31,12 +31,12 @@ export const Step2Form = () => {
         checkboxGroup: state.data.data?.checkboxGroup
     }));
 
-    // useEffect(() => {
-    //     for(let i = 0; i <= data.advantages.length - 1; i++) {
-    //         // setValue(`${i}`, {id: i, value: data.advantages[i].value} )
-    //         setValue(`${i}`, { id: i, value: data.advantages[i].value} )
-    //     }
-    // }, [])
+    useEffect(() => {
+        for(let i = 0; i <= data.advantages.length - 1; i++) {
+            // setValue(`${i}`, {id: i, value: data.advantages[i].value} )
+            setValue(`${i}`, data.advantages[i].value )
+        }
+    }, [])
 
     const handleAddAdvantage = () => {
         dispatch(addAdvantage(data.advantages))
@@ -48,7 +48,7 @@ export const Step2Form = () => {
     const handleMove = () => {
         const values = getValues();
         console.log(values);
-        dispatch(addValueToAdvantange({ value: values}))
+        // dispatch(addValueToAdvantange())
         navigate("/step3")
     }
     return(

@@ -4,7 +4,7 @@ type Data = {
     nickname?: string;
     name?: string;
     surname?: string;
-    // advantages?: [];
+    about?: string;
     checkboxGroup?: [];
     radio?: React.ChangeEvent<HTMLInputElement>;
 }

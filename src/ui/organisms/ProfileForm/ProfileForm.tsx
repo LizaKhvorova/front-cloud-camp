@@ -42,9 +42,9 @@ export const ProfileForm = () => {
                 defaultValue={data.phoneNumber}
                 render={({ field: { onChange, value } }) => (
                     <PhoneInput
-                    label="Номер телефона"
-                      onChange={onChange}
-                      value={value}
+                        label="Номер телефона"
+                        onChange={onChange}
+                        value={value}
                     />
                   )}
             />
