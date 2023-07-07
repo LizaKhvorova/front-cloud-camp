@@ -47,12 +47,14 @@ export const AvatarWrapper = styled(Box)`
     ${adaptive.maxWidth.tablet} {
         max-width: 60px;
         max-height: 60px;
-        margin-right: 24px;
+        margin-right: 14px;
+        font-size: 30px;
     }
 
     ${adaptive.maxWidth.mobile} {
         max-width: 40px;
         max-height: 40px;
         margin-right: 8px;
+        font-size: 20px;
     }
 `

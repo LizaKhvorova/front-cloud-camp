@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import { useNavigate } from "react-router";
 import { useForm, Controller } from "react-hook-form";
 import { useAppDispatch, useAppSelector, addProfileData } from "store";
-
 import { Head } from "./Head";
 import { Flex, Input, PhoneInput, Button, Form } from "ui/atoms";
 
@@ -35,7 +34,7 @@ export const ProfileForm = () => {
     return(
         <Form>
             <Head />
-            <Flex border={"1px solid rgba(0, 0, 0, 0.08)"} width="100%" maxWidth="852px" justifyContent="center" margin="24px 0"></Flex>
+            <Flex border={"1px solid rgba(0, 0, 0, 0.08)"} width="100%" maxWidth="852px" justifyContent="center" margin="24px 10px"></Flex>
             <Controller
                 control={control}
                 name="phoneNumber"

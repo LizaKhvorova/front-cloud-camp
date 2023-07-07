@@ -1,4 +1,5 @@
 export const INDENT = {
+    xs: "6px",
     s: "8px",
     m: "10px",
     l: "12px",

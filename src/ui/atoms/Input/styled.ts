@@ -7,7 +7,7 @@ import { adaptive } from "../../theme";
 import { Box } from "../Basics";
 import { Delete } from "../Icon";
 
-const inputStyles = css`
+const inputStyles = css<IStyledInputProps>`
     box-sizing: border-box;
     font-family: ${({theme}) => theme.fonts.SBSansInterface};
     font-weight: 400;
@@ -32,90 +32,96 @@ const inputStyles = css`
         font-weight: 400;
         color: rgba(0, 0, 0, 0.48);
     }
-`
 
-export const StyledInput = styled.input<IStyledInputProps>`
-    ${inputStyles};
-    padding: ${({ theme }) => theme.indent.l}
+    ${({ theme, variation }) => {
+        switch (variation) {
+            case "small":
+                return `padding: ${theme.indent.l} ${theme.indent.s}`;
+            case "medium":
+                return `padding: ${theme.indent.l} ${theme.indent.m}`;
+            case "large":
+                return `padding: ${theme.indent.l} ${theme.indent.l}`
+            default:
+                return `padding: ${theme.indent.l} ${theme.indent.l}`
+            }
+    }};
+
+    ${({variation}) => {
+        switch (variation) {
+            case "small":
+                return  `height: 28px;
+                width: 200px`;
+            case "medium":
+                return `height: 36px;
+                width: 250px`;
+            case "large":
+                return `height: 44px;
+                width: 300px`;
+            default:
+                return `height: 44px;
+                width: 300px`;
+        }
+    }};
+
+    ${adaptive.maxWidth.tablet} {
+        font-size: 12px;
         ${({ theme, variation }) => {
             switch (variation) {
                 case "small":
-                    return theme.indent.s;
+                    return `padding: ${theme.indent.m} ${theme.indent.xs}`;
                 case "medium":
-                    return theme.indent.m;
+                    return `padding: ${theme.indent.m} ${theme.indent.s}`;
                 case "large":
-                    return theme.indent.l;
+                    return `padding: ${theme.indent.m} ${theme.indent.s}`
                 default:
-                    return theme.indent.l;
+                    return `padding: ${theme.indent.m} ${theme.indent.s}`
             }
         }};
-    height: ${({variation}) => {
-        switch (variation) {
-            case "small":
-                return "28px";
-            case "medium":
-                return "36px";
-            case "large":
-                return "44px";
-            default:
-                return "44px";
-        }
-    }};
-    width: ${({variation}) => {
-        switch (variation) {
-            case "small":
-                return "200px";
-            case "medium":
-                return "250px";
-            case "large":
-                return "300px";
-            default:
-                return "300px";
-        }
-    }};
+        ${({variation}) => {
+            switch (variation) {
+                case "small":
+                    return  `height: 24px;
+                    width: 200px`;
+                case "medium":
+                    return `height: 32px;
+                    width: 250px`;
+                case "large":
+                    return `height: 40px;
+                    width: 300px`;
+                default:
+                    return `height: 40px;
+                    width: 300px`;
+            }
+        }};
+    }
+
+    ${adaptive.maxWidth.mobile} {
+        font-size: 10px;
+        ${({variation}) => {
+            switch (variation) {
+                case "small":
+                    return  `height: 20px;
+                    width: 100px`;
+                case "medium":
+                    return `height: 28px;
+                    width: 150px`;
+                case "large":
+                    return `height: 36px;
+                    width: 200px`;
+                default:
+                    return `height: 36px;
+                    width: 200px`;
+            }
+        }};
+    }
+`
+export const StyledInput = styled.input<IStyledInputProps>`
+    ${inputStyles};
 `;
 
 export const StyledMaskedInput = styled(InputMask)<IStyledInputProps>`
-    ${inputStyles};
-    padding: ${({ theme }) => theme.indent.l}
-        ${({ theme, variation }) => {
-            switch (variation) {
-                case "small":
-                    return theme.indent.s;
-                case "medium":
-                    return theme.indent.m;
-                case "large":
-                    return theme.indent.l;
-                default:
-                    return theme.indent.l;
-            }
-        }};
-    height: ${({variation}) => {
-        switch (variation) {
-            case "small":
-                return "28px";
-            case "medium":
-                return "36px";
-            case "large":
-                return "44px";
-            default:
-                return "44px";
-        }
-    }};
-    width: ${({variation}) => {
-        switch (variation) {
-            case "small":
-                return "200px";
-            case "medium":
-                return "250px";
-            case "large":
-                return "300px";
-            default:
-                return "300px";
-        }
-    }};
-
-`
+    ${inputStyles}
+`;
 
 export const TipMessage = styled(Box)`
     font-family: ${({theme}) => theme.fonts.SBSansInterface};

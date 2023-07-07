@@ -68,7 +68,7 @@ export const Step3Form = () => {
             />
             </Box>
             <Flex justifyContent="space-between" mt="60px" maxWidth="680px">
-                <Button inverted onClick={() => navigate("/step2")}>Назад</Button>
+                <Button inverted onClick={() => navigate("/step1")}>Назад</Button>
                 
                 <Button onClick={handleSubmitData}>Отправить</Button>
             </Flex>
