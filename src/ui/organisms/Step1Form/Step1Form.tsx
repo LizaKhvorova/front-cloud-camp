@@ -7,7 +7,7 @@ export const Step1Form = () => {
 
     return(
         <Flex flexDirection="column" >
-            <Stepper width="680px"/>
+            <Stepper/>
             <InputForm />
         </Flex>    
     )

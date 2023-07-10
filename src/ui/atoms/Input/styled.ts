@@ -96,6 +96,7 @@ const inputStyles = css<IStyledInputProps>`
     }
 
     ${adaptive.maxWidth.mobile} {
+        min-width: 200px;
         font-size: 10px;
         ${({variation}) => {
             switch (variation) {
@@ -166,4 +167,13 @@ export const StyledLabel = styled(Box)`
 export const InputWrapper = styled(Box)`
     display: flex;
     flex-direction: column;
+    margin-bottom: 24px;
+
+    ${adaptive.maxWidth.tablet} {
+        margin-bottom: 16px;
+    }
+
+    ${adaptive.maxWidth.mobile} {
+        margin-bottom: 8px;
+    }
 `;

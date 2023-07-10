@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { Input, Select, Button, Flex, Box} from "ui/atoms";
 import { useAppDispatch, useAppSelector, addProfileData, addSex } from "store";
 import { genderOptions } from "../../../consts/genderOptions";
+import { StyledFLex } from "./styled";
 
 export const InputForm = () => {
     const navigate = useNavigate();
@@ -38,8 +39,8 @@ export const InputForm = () => {
         navigate("/step2")
     }
     return (
-        <Box>
-            <Flex flexDirection="column" height="520px" marginY="20px" justifyContent="space-evenly">
+        <>
+            <StyledFLex>
                 <Input 
                     label="Nickname" 
                     value={data.nickname}
@@ -89,7 +90,6 @@ export const InputForm = () => {
                     options={genderOptions} 
                     value={data.sex} 
                 /> */}
-              
                 <Controller
                 control={control}
                 name="sex"
@@ -102,11 +102,11 @@ export const InputForm = () => {
                     />
                   )}
             />
-            </Flex>
+            </StyledFLex>
             <Flex justifyContent="space-between">
                 <Button inverted onClick={() => navigate("/profile")}>Назад</Button>
                 <Button onClick={handleMove}>Далее</Button>
             </Flex>
-        </Box>    
+        </>    
     )
 }

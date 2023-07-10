@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { Absolute, Box, Relative, Flex } from "../Basics";
+import { Absolute, Box, Flex } from "../Basics";
 import { Typography } from "../Typography";
 import {IStepperProps} from "./types";
 
 export const StyledWrapper = styled(Box)<{ width: string }>`
+    min-width: 200px;
     width: ${({width}) => width};
+    max-width: 680px;
     margin: 0 auto;
     z-index: 0;
 `
@@ -41,13 +43,15 @@ export const ProgressLine = styled(Absolute)<IStepperProps>`
 
 export const ActiveStep = styled(Typography)`
     color: #5558FA
-`
+`;
+
 export const PassiveStep = styled(Typography)`
     color: #666666
-`
+`;
 
 export const DotWrapper = styled(Flex)`
     align-items: center;
     justify-content: space-between;
-    width: 680px;
-`
+    width: ${({width}) => width};
+    max-width: 680px;
+`;

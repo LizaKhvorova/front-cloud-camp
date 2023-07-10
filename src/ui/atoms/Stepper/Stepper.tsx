@@ -13,7 +13,7 @@ export const Stepper = ({
         <StyledWrapper width={width}>
             <Relative height="16px">
                 <BackLine>
-                    <Absolute width="860px" zIndex="100">
+                    <Absolute width={width} zIndex="100">
                         <DotWrapper>
                         {steps.map((item) => (
                             item < current ? 

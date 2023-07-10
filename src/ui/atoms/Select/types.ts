@@ -11,7 +11,7 @@ export interface ISelectProps{
     onClick?: () => void;
 }
 
-export interface IStyledUlProps {
+export interface IStyledProps {
     variation?: size;
     value?: string;
 }

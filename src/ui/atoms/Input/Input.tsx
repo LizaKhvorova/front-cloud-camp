@@ -47,7 +47,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps> (
         };
 
         return (
-            <InputWrapper {...other} marginBottom="24px">
+            <InputWrapper {...other}>
                 {label ? (
                     <Box>
                         <StyledLabel>{label}</StyledLabel>
