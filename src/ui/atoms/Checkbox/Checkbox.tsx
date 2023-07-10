@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import { Flex } from "../Basics";
-import {StyledCheckbox} from "./styled";
-import { Typography } from "../Typography";
+import {StyledCheckbox, StyledLabel} from "./styled";
 import { ICheckboxProps } from "./types";
 
 export const Checkbox = ({label}: ICheckboxProps) => {
@@ -14,7 +13,7 @@ export const Checkbox = ({label}: ICheckboxProps) => {
     return (
         <Flex mb="5px">
             <StyledCheckbox onClick={handleChecked} checked={isChecked}/>
-            <Typography color="#333333" marginLeft="8px">{label}</Typography>
+            <StyledLabel>{label}</StyledLabel>
         </Flex>    
     )
 }

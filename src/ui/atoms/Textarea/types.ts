@@ -11,6 +11,7 @@ export interface ITextareaProps {
     label?: string;
     tip?: string;
     maxLength?: number;
+    // width?: string;
     ref?: React.Ref<HTMLTextAreaElement>;
     onChange?:(event: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (event: React.FocusEvent<HTMLTextAreaElement>) => void;

@@ -45,7 +45,7 @@ export const Step3Form = () => {
     
     return (
         <Flex flexDirection="column">
-            <Stepper width="680px" current={3}/>
+            <Stepper current={3}/>
             <Box mt="60px">
                 <Controller
                 control={control}
@@ -67,7 +67,7 @@ export const Step3Form = () => {
                   )}
             />
             </Box>
-            <Flex justifyContent="space-between" mt="60px" maxWidth="680px">
+            <Flex justifyContent="space-between" mt="60px" maxWidth="680px" minWidth="200px">
                 <Button inverted onClick={() => navigate("/step1")}>Назад</Button>
                 
                 <Button onClick={handleSubmitData}>Отправить</Button>

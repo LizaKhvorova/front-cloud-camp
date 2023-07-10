@@ -5,7 +5,6 @@ import { IStyledInputProps } from "./types";
 
 import { adaptive } from "../../theme";
 import { Box } from "../Basics";
-import { Delete } from "../Icon";
 
 const inputStyles = css<IStyledInputProps>`
     box-sizing: border-box;

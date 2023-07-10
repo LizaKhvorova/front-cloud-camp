@@ -15,10 +15,12 @@ export const StyledModal = styled(Box)`
 export const ModalCard = styled(Card)`
     width: 100%;
     max-width: 400px;
+    min-width: 200px;
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -200px;
-    margin-top: -150px;
+    margin-top: -150px; 
+    /* margin: 0 auto; */
     padding: 32px;
 `

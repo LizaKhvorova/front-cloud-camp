@@ -22,3 +22,19 @@ export const StyledWrapper = styled(Flex)`
         height: 10px;
     }
 `
+
+export const StyledSuccessWrapper = styled(Flex)`
+    width: 80px;
+    height: 80px;
+    align-items: center;
+
+    ${adaptive.maxWidth.tablet} {
+        width: 65px;
+        height: 65px;
+    }
+
+    ${adaptive.maxWidth.mobile} {
+        width: 55px;
+        height: 55px;
+    }
+`

@@ -103,7 +103,7 @@ export const InputForm = () => {
                   )}
             />
             </StyledFLex>
-            <Flex justifyContent="space-between">
+            <Flex justifyContent="space-between" minWidth="200px">
                 <Button inverted onClick={() => navigate("/profile")}>Назад</Button>
                 <Button onClick={handleMove}>Далее</Button>
             </Flex>

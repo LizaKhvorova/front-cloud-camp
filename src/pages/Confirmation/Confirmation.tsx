@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import { Typography, Flex, Button } from "ui/atoms";
+import { Typography, Flex, Button, Success, Error, CloseModal } from "ui/atoms";
 import { ModalLayout } from "ui/templates/ModalLayout";
-import { Success, Error, CloseModal } from "ui/atoms";
 import {IConfirmationProps} from "./types";
 
 export const Confirmation = ({setIsOpen}: IConfirmationProps) => {
-    const [success, setSuccess] = useState(true);
+    const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
     
     return (

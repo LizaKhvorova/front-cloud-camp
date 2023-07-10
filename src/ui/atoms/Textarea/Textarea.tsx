@@ -4,7 +4,7 @@ import {
     StyledLabel,
     TipMessage,
     StyledTextarea,
-    TextareaWrapper,
+    TextareaWrapper
 } from "./styled";
 import { ITextareaProps } from "./types";
 
@@ -65,7 +65,7 @@ export const Textarea: FC<ITextareaProps> =
                             value={textareaValue}
                             maxLength={maxLength}
                         />
-                        <Flex justifyContent="flex-end" alignItems="self-end">
+                        <Flex justifyContent="flex-end" alignItems="self-end" minWidth="200px">
                                 <Typography size="xs" paddingRight="20px">
                                     {`${charCount}/${maxLength}`}
                                 </Typography>

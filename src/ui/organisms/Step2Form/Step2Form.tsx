@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router";
 import {useForm} from "react-hook-form"
 import { useAppDispatch, useAppSelector, addAdvantage, deleteAdvantage, addValueToAdvantange } from "store";
+import {StyledTypography, StyledFlex} from "./styled";
 import { 
     Flex, 
     Stepper, 
     Input, 
-    Typography, 
     Button, 
     Checkbox, 
     Radio,
@@ -52,10 +52,10 @@ export const Step2Form = () => {
         navigate("/step3")
     }
     return(
-        <Flex flexDirection="column">
-            <Stepper width="680px" current={2}/> 
+        <StyledFlex>
+            <Stepper current={2}/> 
             <Flex flexDirection="column" mt="50px" mb="10px">
-                <Typography mb="10px">Advantages</Typography>
+                <StyledTypography>Advantages</StyledTypography>
                 {data.advantages.map(
                     (item) => 
                     <Box key={item.id}>
@@ -66,21 +66,23 @@ export const Step2Form = () => {
                             value={item.value}/>
                     </Box>)}
             </Flex> 
-            <Button inverted width="45px" onClick={handleAddAdvantage}><Cross/></Button>
+            <Button inverted width="45px" onClick={handleAddAdvantage}>
+                <Cross/>
+            </Button>
             <Flex marginY="20px" flexDirection="column">
-                <Typography mb="5px">Checkbox Group</Typography>
+                <StyledTypography>Checkbox Group</StyledTypography>
                 {checkboxGroup.map((item) => (
                     <Checkbox label={item.label} key={item.id} {...register(`checkboxGroup-${item.id}`)}/>
                     ))}
             </Flex>
             <Flex flexDirection="column" alignItems="start">
-                <Typography mb="5px">Radio Group</Typography>
+                <StyledTypography>Radio Group</StyledTypography>
                 <Radio />
             </Flex>
-            <Flex justifyContent="space-between" mt="60px">
-                <Button inverted onClick={() => navigate("/step2")}>Назад</Button>
+            <Flex justifyContent="space-between" mt="60px" minWidth="200px">
+                <Button inverted onClick={() => navigate("/step1")}>Назад</Button>
                 <Button onClick={handleMove}>Далее</Button>
             </Flex>
-        </Flex>
+        </StyledFlex>
     )
 }
